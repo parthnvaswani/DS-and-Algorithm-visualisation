@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DS and Algorithm visualisation</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        h2{
+            margin: 20px;
+            text-decoration: underline green;
+        }
+        a{
+            text-decoration: none;
+            text-align: center;
+            color: white;
+        }
+
+        .items{
+            display: grid;
+            padding: 20px;
+            grid-template-columns: repeat(auto-fill,minmax(180px,1fr));
+            gap: 30px;
+        }
+
+        img{
+            height: 80%;
+            width: 95%;
+        }
+    :root{
+        --time:.2s;
+    }
+    .item{
+        position: relative;
+        height: 300px;
+        width: 200px;
+    }
+    .anim{
+        background-color: rgb(29, 51, 240);
+        transition: transform var(--time) ease var(--time);
+    }
+    .con{
+        background-color: cadetblue;
+        transform: rotateY(-90deg);
+        transition: transform var(--time);
+    }
+    .child{
+        height: 300px;
+        width: 200px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 4px 4px 4px 2px grey;
+    }
+    .item:hover .anim{
+        transform: rotateY(90deg);
+        transition: transform var(--time);
+    }
+    .item:hover .con{
+        transform: rotateY(0deg);
+        transition: transform var(--time) ease var(--time);
+    }
+    </style>
+</head>
+<body>
+    <h2>DS and Algorithm visualisation</h2>
+    <div class="items">
+    <a href="./Astar/index.html">
+    <div class="item">
+        <div class="con child">
+            <img src="./images/astar.gif" alt="">
+        </div>
+        <div class="anim child">
+            A*(A star pathfinding algorithm)
+        </div>
+    </div>
+    </a>
+    <a href="./raycasting/index.html">
+        <div class="item">
+            <div class="con child">
+                <img src="./images/raycasting.gif" alt="">
+            </div>
+            <div class="anim child">
+                Raycasting
+            </div>
+        </div>
+    </a>
+    <a href="./linkedlist/index.html">
+        <div class="item">
+            <div class="con child">
+                <img src="./images/linkedlistc.PNG" alt="">
+            </div>
+            <div class="anim child">
+                Linked List
+            </div>
+        </div>
+    </a>
+    <a href="./Bubble sort/index.html">
+        <div class="item">
+            <div class="con child">
+                <img src="./images/bubblesort.gif" alt="">
+            </div>
+            <div class="anim child">
+                Bubble Sort
+            </div>
+        </div>
+    </a>
+    </div>
+</body>
+</html>

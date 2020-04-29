@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A*</title>
+    <script src="p5.min.js"></script>
+    <script src="Cell.js"></script>
+    <script src="sketch.js"></script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            margin:2em;
+        }
+        .heading{
+            font-size: 2em;
+            margin: 1em 0;
+        }
+        #obj{
+            display: block;
+            margin-bottom: 2em;
+        }
+    </style>
+</head>
+<body>
+    <div class="heading">A* pathfinding algorithm</div>
+    Options:
+    <select id="obj">
+        <option value="add wall">add wall</option>
+        <option value="move start">move start</option>
+        <option value="move end">move end</option>
+        <option value="remove wall">remove wall</option>
+    </select>
+</body>
+</html>
